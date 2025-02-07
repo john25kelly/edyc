@@ -28,6 +28,9 @@ Remote Preview Build: eas build --profile preview --platform android
 Remote Development Build : eas build --profile development --platform android
 Local build: eas build --platform android --local
 
+git commit  -m "First commit" 
+git push -u origin main
+
 
 
 In the output, you'll find options to open the app in a

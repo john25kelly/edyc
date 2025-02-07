@@ -18,12 +18,6 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.john25kelly.edyc",
-      "config": {
-        "googleMaps": {
-          "apiKey": "123123"
-        }
-      },
-      "googleServicesFile": "./app/google-services.json"
     },
     "web": {
       "bundler": "metro",

@@ -16,6 +16,13 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
+
+For a LocalBuild:
+npx expo install expo-dev-client
+npx expo run:android
+
+/Users/john/Library/Android/sdk/platform-tools/adb -s emulator-5554 install -r -d --user 0 /Users/john/development/EDYC/edyc/android/app/build/outputs/apk/debug/app-debug.apk
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)

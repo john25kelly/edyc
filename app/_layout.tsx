@@ -1,39 +1,53 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Drawer } from 'expo-router/drawer';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
+export default function Layout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Drawer>
+        <Drawer.Screen
+          name="index" // This is the name of the page and must match the url from root
+          options={{
+            drawerLabel: 'Home',
+            title: 'Menu',
+          }}
+        />
+        <Drawer.Screen
+          name="downloads/index" // This is the name of the page and must match the url from root
+          options={{
+            drawerLabel: 'Downloads',
+            title: 'Menu',
+          }}
+        />
+        <Drawer.Screen
+          name="race/(tabs)" // This is the name of the page and must match the url from root
+          options={{
+            drawerLabel: 'Racing',
+            title: 'Menu',
+          }}
+        />
+        <Drawer.Screen
+          name="results/index" // This is the name of the page and must match the url from root
+          options={{
+            drawerLabel: 'Results',
+            title: 'Menu',
+          }}
+        />
+        <Drawer.Screen
+          name="noticeBoard/index" // This is the name of the page and must match the url from root
+          options={{
+            drawerLabel: 'Notice Board',
+            title: 'Menu',
+          }}
+        />
+        <Drawer.Screen
+          name="calendar/index" // This is the name of the page and must match the url from root
+          options={{
+            drawerLabel: 'Calendar',
+            title: 'Menu',
+          }}
+        />
+      </Drawer>
+    </GestureHandlerRootView>
   );
 }

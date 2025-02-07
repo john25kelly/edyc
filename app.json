@@ -20,7 +20,7 @@
       "package": "com.john25kelly.edyc",
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyCftgp4K3JyxTe1kmxiIsLjvzHXDn__OrE"
+          "apiKey": "123123"
         }
       },
       "googleServicesFile": "./app/google-services.json"

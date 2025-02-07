@@ -23,6 +23,12 @@ npx expo run:android
 
 /Users/john/Library/Android/sdk/platform-tools/adb -s emulator-5554 install -r -d --user 0 /Users/john/development/EDYC/edyc/android/app/build/outputs/apk/debug/app-debug.apk
 
+Useful commands:
+Remote Preview Build: eas build --profile preview --platform android
+Remote Development Build : eas build --profile development --platform android
+Local build: eas build --platform android --local
+
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)

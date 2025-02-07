@@ -29,6 +29,7 @@ Remote Development Build : eas build --profile development --platform android
 Local build: eas build --platform android --local
 
 
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
